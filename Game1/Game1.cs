@@ -236,8 +236,6 @@ namespace Game1
                 Coin.Draw();
             }
             Statics.SPRITEBATCH.Draw(this.bottomBar, new Vector2(0, 650), Color.White);
-            
-            Statics.SPRITEBATCH.DrawString(this.Font, "Score : " + this.score.ToString(), new Vector2(10, 10), Color.Black);
 
             if (!started)
             {
@@ -249,6 +247,8 @@ namespace Game1
                 Statics.SPRITEBATCH.Draw(Statics.PIXEL, new Rectangle(0, 0, Statics.GAME_WIDTH, Statics.GAME_HEIGHT), new Color(1f, 0f, 0f, 0.3f));
                 Statics.SPRITEBATCH.Draw(this.gameover, new Vector2(0, 0), Color.White);
             }
+
+            Statics.SPRITEBATCH.DrawString(this.Font, "Score : " + this.score.ToString(), new Vector2(10, 10), Color.Black);
 
             Statics.SPRITEBATCH.End();
             base.Draw(gameTime);
